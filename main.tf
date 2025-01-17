@@ -9,7 +9,7 @@ provider "azurerm" {
 
 # Key Vault creation
 resource "azurerm_key_vault" "key-vault" {
-  name                        = "Key-vault-rg-common-01" # Key Vault name (must be globally unique)
+  name                        = "Key-vault-rg-common-001" # Key Vault name (must be globally unique)
   location                    = azurerm_resource_group.rg-common.location
   resource_group_name         = azurerm_resource_group.rg-common.name
   enabled_for_disk_encryption = true
