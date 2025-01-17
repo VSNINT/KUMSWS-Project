@@ -71,6 +71,19 @@ resource "azurerm_subnet" "sn2-si" {
   resource_group_name  = azurerm_resource_group.uat-rg.name
   virtual_network_name = azurerm_virtual_network.vn-si.name
   address_prefixes     = ["10.1.4.0/24"]
+ # Add delegation for Microsoft.Web/serverFarms
+  delegation {
+    name = "MicrosoftWebServerFarmsDelegation"
+
+    service_delegation {
+      name = "Microsoft.Web/serverFarms"
+
+      actions = [
+        "Microsoft.Network/virtualNetworks/subnets/join/action",
+        "Microsoft.Network/virtualNetworks/subnets/prepareNetworkPolicies/action",
+      ]
+    }
+  }
 }
 
 resource "azurerm_subnet" "sn3-si" {
