@@ -35,7 +35,7 @@ resource "azurerm_virtual_network" "common-vnet" {
   name                = var.vnetname
   location            = azurerm_resource_group.rg-common.location
   resource_group_name = azurerm_resource_group.rg-common.name
-  address_space       = ["10.1.0.0/16"]
+  address_space       = ["10.1.0.0/22"]
 }
 
 # Hub SubNet
@@ -44,7 +44,7 @@ resource "azurerm_subnet" "common-subnet" {
   name                 = var.subnetname
   resource_group_name  = azurerm_resource_group.rg-common.name
   virtual_network_name = azurerm_virtual_network.common-vnet.name
-  address_prefixes     = ["10.1.0.0/24"]
+  address_prefixes     = ["10.1.0.0/25"]
 }
 
 # Spoke Vnet (UAT)
@@ -52,7 +52,7 @@ resource "azurerm_virtual_network" "vn-si" {
   name                = var.vnet_name
   location            = azurerm_resource_group.uat-rg.location
   resource_group_name = azurerm_resource_group.uat-rg.name
-  address_space       = ["10.0.0.0/16"]
+  address_space       = ["10.1.4.0/22"]
 }
 
 # Spoke SubNet
@@ -61,21 +61,21 @@ resource "azurerm_subnet" "sn2-si" {
   name                 = "subnet-uat-rg-01"
   resource_group_name  = azurerm_resource_group.uat-rg.name
   virtual_network_name = azurerm_virtual_network.vn-si.name
-  address_prefixes     = ["10.0.0.0/24"]
+  address_prefixes     = ["10.1.4.0/24"]
 }
 
 resource "azurerm_subnet" "sn3-si" {
   name                 = "subnet-uat-rg-02"
   resource_group_name  = azurerm_resource_group.uat-rg.name
   virtual_network_name = azurerm_virtual_network.vn-si.name
-  address_prefixes     = ["10.0.1.0/24"]
+  address_prefixes     = ["10.1.5.0/24"]
 }
 
 resource "azurerm_subnet" "sn4-si" {
   name                 = "subnet-uat-rg-02"
   resource_group_name  = azurerm_resource_group.uat-rg.name
   virtual_network_name = azurerm_virtual_network.vn-si.name
-  address_prefixes     = ["10.0.2.0/24"]
+  address_prefixes     = ["10.1.6.0/24"]
 }
 
 #NSG
