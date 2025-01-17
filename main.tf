@@ -1,3 +1,12 @@
+provider "azurerm" {
+  features {}
+
+  client_id       = var.client_id
+  client_secret   = var.client_secret
+  tenant_id       = var.tenant_id
+  subscription_id = var.subscription_id
+}
+
 # Key Vault creation
 resource "azurerm_key_vault" "key-vault" {
   name                        = "Key-vault-rg-common-01" # Key Vault name (must be globally unique)
