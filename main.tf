@@ -142,7 +142,7 @@ resource "azurerm_application_gateway" "Appgateway-si-gokeodbsws-network" {
     public_ip_address_id = azurerm_public_ip.si-gokeodbsws-PubIP.id
   }
  # Reference the existing WAF policy
-  firewall_policy_id = azurerm_web_application_firewall_policy.waf-rg-common.id
+  firewall_policy_id = azurerm_web_application_firewall_policy.rg-common.id
   
 
   backend_address_pool {
