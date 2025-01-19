@@ -1,4 +1,4 @@
-variable "location" {
+/*variable "location" {
   # Variables (You can modify these as per your needs)
   default = "Central India"
 }
@@ -47,4 +47,4 @@ variable "tenant_id" {
 variable "subscription_id" {
   description = "The subscription ID of the Azure subscription"
   type        = string
-}
+}*/
