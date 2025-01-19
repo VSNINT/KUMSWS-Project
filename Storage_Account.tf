@@ -15,7 +15,7 @@ resource "azurerm_storage_container" "container-uat-01" {
   container_access_type = "private"
 }
 
-/*resource "azurerm_storage_blob" "blob-uat-01" {
+resource "azurerm_storage_blob" "blob-uat-01" {
   name                   = "blob-uat-01"
   storage_account_name   = azurerm_storage_account.storageaccountuat01.name
   storage_container_name = azurerm_storage_container.container-uat-01.name
