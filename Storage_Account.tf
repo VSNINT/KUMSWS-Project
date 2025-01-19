@@ -1,4 +1,4 @@
-resource "azurerm_storage_account" "storageaccountuat01" {
+/*resource "azurerm_storage_account" "storageaccountuat01" {
   name                     = "storageaccountuat01"
   resource_group_name      = azurerm_resource_group.uat-rg.name
   location                 = azurerm_resource_group.uat-rg.location
