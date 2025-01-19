@@ -1,4 +1,4 @@
-resource "azurerm_app_service_plan" "gokeodbsws-appservice-plan" {
+/*resource "azurerm_app_service_plan" "gokeodbsws-appservice-plan" {
   name                = "app-service-plan-sws-uat-rg"
   resource_group_name = azurerm_resource_group.uat-rg.name
   location            = azurerm_resource_group.uat-rg.location
@@ -8,4 +8,4 @@ resource "azurerm_app_service_plan" "gokeodbsws-appservice-plan" {
     tier = "Standard"
     size = "S2"
   }
-}
+}*/
