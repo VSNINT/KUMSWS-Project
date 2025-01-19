@@ -1,4 +1,4 @@
-resource "azurerm_web_application_firewall_policy" "rg-common" {
+/*resource "azurerm_web_application_firewall_policy" "rg-common" {
   name                = "waf-rg-common"
   resource_group_name = "rg-common"
   location            = "Central India"
@@ -60,4 +60,4 @@ resource "azurerm_web_application_firewall_policy" "rg-common" {
       }
     }
   }
-}
+}*/
