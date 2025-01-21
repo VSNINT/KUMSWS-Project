@@ -1,4 +1,4 @@
-/*variable "location" {
+variable "location" {
   # Variables (You can modify these as per your needs)
   default = "Central India"
 }
@@ -9,23 +9,15 @@ variable "blob_container_name" {
 }
 
 variable "vnet_name" {
-  default = "vnet-uat-01"
+  default = "vnet-prod-01"
 }
 
 variable "subnet_name" {
-  default = "subnet-uat-01"
-}
-
-variable "vnetname" {
-  default = "common-vnet"
-}
-
-variable "subnetname" {
-  default = "common-subnet"
+  default = "vnet-prod-01"
 }
 
 variable "nsg_name" {
-  default = "nsg-uat-01"
+  default = "nsg-prod-01"
 }
 
 # Azure Authentication Variables
@@ -47,4 +39,4 @@ variable "tenant_id" {
 variable "subscription_id" {
   description = "The subscription ID of the Azure subscription"
   type        = string
-}*/
+}
