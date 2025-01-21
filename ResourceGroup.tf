@@ -1,11 +1,6 @@
-/*#Spoke Resource Group (UAT)
-resource "azurerm_resource_group" "uat-rg" {
-  name     = "uat-rg"
+#Spoke Resource Group (prod)
+resource "azurerm_resource_group" "prod-rg" {
+  name     = "prod-rg"
   location = "Central India"
 }
 
-# Hub Resource Group
-resource "azurerm_resource_group" "rg-common" {
-  name     = "rg-common"
-  location = "Central India"
-}*/
